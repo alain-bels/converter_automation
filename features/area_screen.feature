@@ -4,6 +4,7 @@ Feature: User is able to convert area units
   Background:
     Given I click on Got it button
 
+  @wip
   Scenario: User is able to dismiss help
     When I click on Got it button
     Then I land on Area screen
@@ -26,9 +27,8 @@ Feature: User is able to convert area units
       | 2      | 2000000 |
       | 3      | 3000000 |
 
-  @wip
   Scenario: User is able to use soft keyboards to enter values
     Given I click on Clear button
     When I click on From field
     And I press "3" on soft keyboard
-    Then I get "35000000" in To field
+    Then I get "3000000" in To field
