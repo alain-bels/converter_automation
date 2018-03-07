@@ -17,14 +17,16 @@ end
 
 Then(/^I see "([^"]*)" in From header$/) do |value|
   actual_value = find_element(id: "header_text_unit_from").text
-  puts("Expected value is #{value}")
-  puts("Actual value is #{actual_value}")
+  if actual_value != value
+    fail("Expected value is #{value}, but actual value was #{actual_value}")
+  end
 end
 
 And(/^I see "([^"]*)" in To header$/) do |value|
   actual_value = find_element(id: "header_text_unit_to").text
-  puts("Expected value is #{value}")
-  puts("Actual value is #{actual_value}")
+  if actual_value != value
+    fail("Expected value is #{value}, but actual value was #{actual_value}")
+  end
 end
 
 And(/^I click on Clear button$/) do
@@ -37,8 +39,9 @@ end
 
 Then(/^I get "([^"]*)" in To field$/) do |value|
   actual_value = find_element(id: "header_value_to").text
-  puts("Expected value is #{value}")
-  puts("Actual value is #{actual_value}")
+  if actual_value != value
+    fail("Expected value is #{value}, but actual value was #{actual_value}")
+  end
 end
 
 When(/^I click on From field$/) do
