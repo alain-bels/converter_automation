@@ -6,7 +6,7 @@ Feature: User is able to convert area units
 
   @wip
   Scenario: User is able to dismiss help
-    When I click on Got it button
+    Given I click on Got it button
     Then I land on Area screen
 
   Scenario: User is able to swap values
