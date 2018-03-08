@@ -1,5 +1,5 @@
 Given(/^I land on help popup$/) do
-  text("Помощь")
+  text("Help")
 end
 
 When(/^I click on Got it button$/) do
@@ -7,7 +7,7 @@ When(/^I click on Got it button$/) do
 end
 
 Then(/^I land on Area screen$/) do
-  text("Площадь")
+  text("Area")
 end
 
 
