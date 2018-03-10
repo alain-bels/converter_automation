@@ -1,11 +1,12 @@
 When(/^I swipe in the menu$/) do
-  Appium::TouchAction.new.swipe(
+  action = Appium::TouchAction.new.swipe(
                              start_x: 0.01,
                              start_y: 0.5,
                              end_x: 0.9,
                              end_y: 0.5,
                              duration: 500
-  ).perform
+  )
+  action.perform
 end
 
 Then(/^I see app menu$/) do
