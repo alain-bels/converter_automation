@@ -35,7 +35,6 @@ Feature: User is able to convert area units
     And I press "356" on soft keyboard
     Then I get "356000000" in To field
 
-  @wip
   Scenario: User is able to convert Hectare to Sq Metre
     When I select "Hectare" from left column
     Then I see "Hectare" in From header
