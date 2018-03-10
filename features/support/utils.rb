@@ -27,3 +27,16 @@ end
 def menu_item_exists(value)
   exists {find_menu_item(value)}
 end
+
+def click_by_unit_list_item(list, value)
+  unit_item = find_unit_list_item(list, value)
+  if exists {unit_item}
+    unit_item.click
+  else
+    fail("No such element #{value} in list #{list}")
+  end
+end
+
+def find_unit_list_item(list, value)
+  find_element(id: list).find_element(xpath: "//android.widget.RadioButton[@text='#{value}']")
+end
