@@ -1,3 +1,4 @@
+@volume
 Feature: User is able to convert Volume units
 
   Background:
