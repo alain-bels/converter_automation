@@ -3,7 +3,7 @@ Feature: User is able to convert area units
 
   Background:
     Given I click on Got it button
-    And I land on Area screen
+    And I land on "Area" screen
 
 #  @wip
 #  Scenario: User is able to dismiss help
@@ -29,9 +29,14 @@ Feature: User is able to convert area units
       | 2      | 2000000 |
       | 3      | 3000000 |
 
-  @wip
   Scenario: User is able to use soft keyboards to enter values
     Given I click on Clear button
     When I click on From field
     And I press "356" on soft keyboard
     Then I get "356000000" in To field
+
+  @wip
+  Scenario: User is able to convert Hectare to Sq Metre
+    When I select "Hectare" from left column
+    Then I see "Hectare" in From header
+    And I get "10000" in To field

@@ -6,10 +6,14 @@ When(/^I click on Got it button$/) do
   find_element(id: "button1").click
 end
 
-Then(/^I land on Area screen$/) do
-  text("Area")
+And(/^I land on "([^"]*)" screen$/) do |value|
+  screen_title = find_element(id: "toolbar")
+                     .find_element(xpath: "//android.widget.TextView[@text='#{value}']")
+                     .text
+  if screen_title != value
+    fail("Expected screen title is #{value}, but actual screen title was #{screen_title}")
+  end
 end
-
 
 When(/^I click on Swap button$/) do
   find_element(id: "fab").click
@@ -54,4 +58,10 @@ And(/^I press "([^"]*)" on soft keyboard$/) do |value|
     digit = Integer(key)
     press_keycode 7 + digit
   end
+end
+
+When(/^I select "([^"]*)" from left column$/) do |value|
+  find_element(id: "radio_group_from")
+      .find_element(xpath: "//android.widget.RadioButton[@text='#{value}']")
+      .click
 end
