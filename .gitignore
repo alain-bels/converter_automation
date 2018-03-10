@@ -3,7 +3,8 @@
 
 # User-specific stuff:
 *.html
-.idea
+screenshots/
+.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
