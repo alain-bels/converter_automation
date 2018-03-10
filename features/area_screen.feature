@@ -19,7 +19,7 @@ Feature: User is able to convert area units
 
     Examples:
       | target | result  |
-      | 1222      | 1000000 |
+      | 1      | 1000000 |
       | 2      | 2000000 |
       | 3      | 3000000 |
 

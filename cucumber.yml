@@ -3,5 +3,5 @@ volume: -t @volume --format html --out report.html --format pretty
 time: -t @time --format html --out report.html --format pretty
 wip: -t @wip --format html --out report.html --format pretty
 
-any: -t @area, @volume, @time, @wip --format html --out report.html --format pretty
+any: -t @area,@volume,@time,@wip --format html --out report.html --format pretty
 wip_area: -t @area -t @wip --format html --out report.html --format pretty
